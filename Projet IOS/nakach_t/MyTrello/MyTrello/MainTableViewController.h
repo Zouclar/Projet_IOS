@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 @interface MainTableViewController : UITableViewController
 @property (nonatomic) NSString *token;
 @property(nonatomic) BOOL *isSomethingEnabled;
+@property (nonatomic) NSMutableArray *array;
 
 @end

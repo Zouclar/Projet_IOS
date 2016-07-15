@@ -1,18 +1,18 @@
 //
-//  MainTableViewController.m
+//  NavigationController.m
 //  MyTrello
 //
-//  Created by Thomas Nakache on 12/07/2016.
+//  Created by Thomas Nakache on 15/07/2016.
 //  Copyright © 2016 Thomas Nakache. All rights reserved.
 //
 
-#import "MainTableViewController.h"
+#import "NavigationController.h"
 
-@interface MainTableViewController ()
+@interface NavigationController ()
 
 @end
 
-@implementation MainTableViewController
+@implementation NavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,39 +22,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
-    
-    self.navigationItem.hidesBackButton = YES;
-    [self setToken: _token];
-    // REQUETE
-    
-    NSString *urltoken = [NSString stringWithFormat: @"https://api.trello.com/1/member/me/boards?token=%@&key=1750ece02327997692ab493e0d299767", _token];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urltoken]
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval:10.0];
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
-                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                    if (error) {
-                                                        NSLog(@"%@", error);
-                                                    } else {
-                                                        //NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-                                                        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: data options: NSJSONReadingMutableLeaves error: &error];
-                                                        [self setArray:[[NSMutableArray alloc] init]];
-                                                        for (int i=0; i<[jsonArray count]; i++) {
-                                                           // NSLog(@"%@",[(NSDictionary*)[jsonArray objectAtIndex:i] objectForKey:@"name"]);
-                                                            [[self array] addObject:[(NSDictionary*)[jsonArray objectAtIndex:i] objectForKey:@"name"]];
-                                                        }
-                                                        NSLog(@"avant le résume : %@", self.array);
-                                                    }
-                                                    
-                                                }];
-    [dataTask resume];
-     NSLog(@"après le résume : %@", _array);
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,23 +33,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return [[self array] count];
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tutu" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    NSString *smp = [[self array] objectAtIndex:[indexPath row]];
-    [[cell textLabel] setText:smp];
+    // Configure the cell...
+    
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
