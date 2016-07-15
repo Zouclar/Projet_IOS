@@ -49,6 +49,7 @@
                                                             [[self array] addObject:[(NSDictionary*)[jsonArray objectAtIndex:i] objectForKey:@"name"]];
                                                         }
                                                         NSLog(@"avant le résume : %@", self.array);
+                                                        //return self.array;
                                                     }
                                                 }];
     [dataTask resume];
