@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainTableViewController.h"
 
 @interface ViewController : UIViewController <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *ViewWeb;
+@property (nonatomic) NSString *token;
 
 @end
 
