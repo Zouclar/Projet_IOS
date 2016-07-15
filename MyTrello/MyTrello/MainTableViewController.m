@@ -50,11 +50,8 @@
                                                         }
                                                         NSLog(@"avant le résume : %@", self.array);
                                                     }
-                                                    
                                                 }];
     [dataTask resume];
-     NSLog(@"après le résume : %@", _array);
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,8 +73,8 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tutu" forIndexPath:indexPath];
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tutu" forIndexPath:indexPath];
     NSString *smp = [[self array] objectAtIndex:[indexPath row]];
     [[cell textLabel] setText:smp];
     return cell;
