@@ -27,8 +27,6 @@
     [_ViewWeb loadRequest:requestObj];
     
     self.ViewWeb.delegate = self;
-//    NSString* cc = [self.ViewWeb stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('pre')[0].contentText"];
-//    NSLog(@"%@", cc);
 }
 
 -(void)webViewDidFinishLoad:(UITableView *) webView
@@ -40,8 +38,7 @@
         //IF TOKEN == TRUE ALORS:
         [self setToken:token];
         if (token) {
-            
-            [self presentViewController:toto animated:YES completion:nil];
+            [self performSegueWithIdentifier:@"tokenSegue" sender:self];
         }
     }
 }
@@ -54,8 +51,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"tokenSegue"]){
-        MainTableViewController *list = (MainTableViewController *) segue.MainTableViewController;
-        list.isSomethingEnabled = YES;
+        MainTableViewController *list = (MainTableViewController *) segue.destinationViewController;
+        [list setToken:[self token]];
     }
 }
 

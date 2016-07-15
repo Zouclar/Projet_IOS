@@ -16,6 +16,7 @@
 		7D1129AE1D33986800A42B4C /* MyTrelloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1129AD1D33986800A42B4C /* MyTrelloTests.m */; };
 		7D1129B91D33986800A42B4C /* MyTrelloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1129B81D33986800A42B4C /* MyTrelloUITests.m */; };
 		7D1129CA1D3552C900A42B4C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1129C91D3552C900A42B4C /* MainTableViewController.m */; };
+		7D112A121D38DE4E00A42B4C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D112A111D38DE4E00A42B4C /* NavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		7D1129BA1D33986800A42B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D1129C81D3552C900A42B4C /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		7D1129C91D3552C900A42B4C /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		7D112A101D38DE4E00A42B4C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		7D112A111D38DE4E00A42B4C /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 		7D1129871D33986800A42B4C = {
 			isa = PBXGroup;
 			children = (
+				7D112A101D38DE4E00A42B4C /* NavigationController.h */,
+				7D112A111D38DE4E00A42B4C /* NavigationController.m */,
 				7D1129921D33986800A42B4C /* MyTrello */,
 				7D1129AC1D33986800A42B4C /* MyTrelloTests */,
 				7D1129B71D33986800A42B4C /* MyTrelloUITests */,
@@ -277,6 +282,7 @@
 			files = (
 				7D1129CA1D3552C900A42B4C /* MainTableViewController.m in Sources */,
 				7D11299B1D33986800A42B4C /* ViewController.m in Sources */,
+				7D112A121D38DE4E00A42B4C /* NavigationController.m in Sources */,
 				7D1129981D33986800A42B4C /* AppDelegate.m in Sources */,
 				7D1129951D33986800A42B4C /* main.m in Sources */,
 			);
