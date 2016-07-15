@@ -15,6 +15,7 @@
 		7D1129A31D33986800A42B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D1129A11D33986800A42B4C /* LaunchScreen.storyboard */; };
 		7D1129AE1D33986800A42B4C /* MyTrelloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1129AD1D33986800A42B4C /* MyTrelloTests.m */; };
 		7D1129B91D33986800A42B4C /* MyTrelloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1129B81D33986800A42B4C /* MyTrelloUITests.m */; };
+		7D1129CA1D3552C900A42B4C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1129C91D3552C900A42B4C /* MainTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7D1129B41D33986800A42B4C /* MyTrelloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTrelloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1129B81D33986800A42B4C /* MyTrelloUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTrelloUITests.m; sourceTree = "<group>"; };
 		7D1129BA1D33986800A42B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D1129C81D3552C900A42B4C /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		7D1129C91D3552C900A42B4C /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				7D1129971D33986800A42B4C /* AppDelegate.m */,
 				7D1129991D33986800A42B4C /* ViewController.h */,
 				7D11299A1D33986800A42B4C /* ViewController.m */,
+				7D1129C81D3552C900A42B4C /* MainTableViewController.h */,
+				7D1129C91D3552C900A42B4C /* MainTableViewController.m */,
 				7D11299C1D33986800A42B4C /* Main.storyboard */,
 				7D11299F1D33986800A42B4C /* Assets.xcassets */,
 				7D1129A11D33986800A42B4C /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1129CA1D3552C900A42B4C /* MainTableViewController.m in Sources */,
 				7D11299B1D33986800A42B4C /* ViewController.m in Sources */,
 				7D1129981D33986800A42B4C /* AppDelegate.m in Sources */,
 				7D1129951D33986800A42B4C /* main.m in Sources */,
@@ -496,6 +502,7 @@
 				7D1129BF1D33986800A42B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D1129C01D33986800A42B4C /* Build configuration list for PBXNativeTarget "MyTrelloTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +511,7 @@
 				7D1129C21D33986800A42B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D1129C31D33986800A42B4C /* Build configuration list for PBXNativeTarget "MyTrelloUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +520,7 @@
 				7D1129C51D33986800A42B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

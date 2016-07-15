@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Foundation/Foundation.h>
+#import "MainTableViewController.h"
 
 @interface ViewController ()
 
@@ -34,39 +35,28 @@
 {
     if([self.ViewWeb.request.mainDocumentURL isEqual: [NSURL
         URLWithString:@"https://trello.com/1/token/approve"]]){
-        NSLog(@"Get token ready !");
-        NSString *token = [self.ViewWeb stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('pre')[0].textContent"];
-        self.ViewWeb.hidden = YES;
-        NSLog(@"Token = %@", token);
+       // NSLog(@"Get token ready !");
+        NSString *token = [self.ViewWeb stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('pre')[0].textContent.replace(/\\s/g,'')"];
+        //IF TOKEN == TRUE ALORS:
+        [self setToken:token];
+        if (token) {
+            
+            [self presentViewController:toto animated:YES completion:nil];
+        }
     }
 }
-
-
-
-
-//NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.trello.com/1/member/me/boards?token=91dc5ab2192ca43240269569a655c112034e7645533ac8b8fcead06348772ba9&key=1750ece02327997692ab493e0d299767"]
-//                                                       cachePolicy:NSURLRequestUseProtocolCachePolicy
-//                                                   timeoutInterval:10.0];
-//[request setHTTPMethod:@"GET"];
-//[request setAllHTTPHeaderFields:headers];
-//
-//NSURLSession *session = [NSURLSession sharedSession];
-//NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
-//                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//                                                if (error) {
-//                                                    NSLog(@"%@", error);
-//                                                } else {
-//                                                    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-//                                                    NSLog(@"%@", httpResponse);
-//                                                }
-//                                            }];
-//[dataTask resume];
-
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"tokenSegue"]){
+        MainTableViewController *list = (MainTableViewController *) segue.MainTableViewController;
+        list.isSomethingEnabled = YES;
+    }
 }
 
 @end
